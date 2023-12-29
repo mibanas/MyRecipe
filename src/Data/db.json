@@ -39,7 +39,9 @@
             "id": 8,
             "nom": "Maroc",
             "image": "lien_image_maroc.jpg"
-          }     , 
+          }
+    ],
+    "plats" : [ 
     {
         "id": 1,
         "nom": "Pizza Margherita",
@@ -281,5 +283,4 @@
         "image": "lien_image_couscous_royal.jpg"
       }
     ]
-  }
-  
+}
