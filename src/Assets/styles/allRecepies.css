@@ -1,0 +1,23 @@
+/* ==================== Body ====================  */
+
+.AllRecepies {
+    display: flex;
+    justify-content: center;
+}
+
+/* ==================== Images ====================  */
+
+.AllRecepies-image {
+    border-radius: 30px;
+    width: 1264px;
+    height: 355px;
+    flex-shrink: 0;
+    background-color: aquamarine;
+}
+
+/* ==================== filres =====================  */
+
+
+
+/* ==================== Products =====================  */
+
