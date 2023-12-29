@@ -39,8 +39,7 @@
             "id": 8,
             "nom": "Maroc",
             "image": "lien_image_maroc.jpg"
-          }      
-    ],
+          }     , 
     {
         "id": 1,
         "nom": "Pizza Margherita",
