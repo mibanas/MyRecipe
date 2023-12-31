@@ -8,6 +8,8 @@ import back from '../../Assets/Icons/back.png'
 import nonext from '../../Assets/Icons/nonext.png'
 import noback from '../../Assets/Icons/noback.png'
 import star from '../../Assets/Icons/Star.svg'
+import reset from '../../Assets/Icons/reset.png'
+import add from '../../Assets/Icons/add.png'
 import plat1 from '../../Assets/img/plat1.jpeg'
 
 
@@ -71,12 +73,20 @@ const AllRecepies = () => {
   };
   
   const filreCategoy = async(origine) => {
+	console.log(origine);
 	try {
-		const response = await fetch(`http://localhost:3000/plats?origine=${origine}`)
-		const data = await response.json()
-
-		setPlats(data)
-		console.log(data);
+		if (origine !== 'reset') {
+			const response = await fetch(`http://localhost:3000/plats?origine=${origine}`)
+			const data = await response.json()
+			setPlats(data)
+			console.log(data);
+		} else {
+			const response = await fetch(`http://localhost:3000/plats`)
+			const data = await response.json()
+			setPlats(data)
+			console.log(data);
+			
+		}
 	} catch (error) {
 		console.log(error);
 	}
@@ -87,13 +97,15 @@ const AllRecepies = () => {
         <div className="AllRecepies-image"></div>
 
         <div className="AllRecepies-filres">
-          	<div className="AllRecepies-back">
+
+          	<div className="AllRecepies-icon">
 				<button onClick={() => slideCategory('back')}>
 					{intervalCategory.min > 0 && <img src={back} alt="" />}
 					{intervalCategory.min === 0 && <img src={noback} alt="" />}
 				</button>
 
 			</div>
+		
 
           	{categories.map((categories, index) => {
 				console.log('min', intervalCategory.min ,'max', intervalCategory.max);
@@ -110,10 +122,22 @@ const AllRecepies = () => {
 				return null
           	})}
           
-          	<div className="AllRecepies-next">
+          	<div className="AllRecepies-icon">
 				<button onClick={() => slideCategory('next')}>
 					{intervalCategory.min < intervalCategory.max - 3 && <img src={nextt} alt="" />}
 					{intervalCategory.min === intervalCategory.max - 3 && <img src={nonext} alt="" />}
+				</button>
+			</div>
+
+			<div className="AllRecepies-icon">
+				<button onClick={() => filreCategoy('reset')}>
+					<img src={reset} alt="" />
+				</button>
+			</div>
+
+			<div className="AllRecepies-icon">
+				<button>
+					<img src={add} alt="" />
 				</button>
 			</div>
         </div>
