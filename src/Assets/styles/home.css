@@ -1,0 +1,167 @@
+.home {
+    position: relative;
+    padding-top: 29rem;
+  }
+  .primary-heading{
+     color: #0a0a0a;
+     font-size: 3em;
+     margin-left: 15%;
+     margin-top: -6em;
+
+  }
+
+  .header {
+    img{ 
+      position: absolute;
+        right: -10px;
+        z-index: -2;
+        max-width: 450px;
+        left: 53%;
+        margin-top: -26em;}
+   
+  }
+  .home-image-section {
+    max-width: 3px;
+  }
+  .primary-text{
+    color: #0a0a0a;
+    font-size: 1em;
+    margin-left: 15%;
+    margin-bottom: .6em;
+
+  }
+ 
+     .center{
+         position: absolute;
+         top: 22%;
+         /* width: %; */
+         height: 520px;
+         margin-left: 66%;
+        transform: translate(-50%, -50%);
+       }
+  
+.btn{
+ border: none;
+ outline: none;
+ margin-left: 15%;
+
+ background-color:rgba(24, 209, 104, 0.927) ;
+ color: white;
+ padding: .75em 1em ;
+ font-size: 1em;
+ font-weight: bold;
+ letter-spacing: 1px;
+ border-radius: 3px;
+ box-shadow: 0 2px 6px rgba(0, 0, 0,0.2);
+ &:hover{
+     box-shadow:0 1px 3px rgba(156, 159, 144, 0.2);
+
+ }
+
+}
+.section.improve-skills {
+  display: flex;
+  justify-content: space-between;
+/* align-items: center; Centre le contenu verticalement */
+padding: 20px;
+  .col.img{
+      img{
+          width: 238px; /* Ajustez la largeur de l'image selon vos besoins */
+          height: 230px; /* Assure la hauteur proportionnelle de l'image */
+          margin-right: 69px;
+          margin-left: 150px;
+          margin-bottom: -66px;
+
+
+          /* max-width: 100%;  */
+          /* margin-right: 20px; 
+          height: 30; */
+          /* width: 60%;  */
+
+          /* position: absolute; */
+           /* width: 35%;
+          right: 80%; */
+      }
+  }
+  .col.typography{
+      font-size: 16px;
+      margin-right: 620px; 
+      margin-left :-5px;        
+       padding-left: 1em;
+       margin-bottom: -120px;
+      .title{
+          color: #0a0a0a;
+          font-size: 2em;
+          white-space: nowrap;
+
+      }
+      .skill-item{
+          border-left: .2em solid rgb(0, 255, 68);
+          margin-bottom: .5em;
+          padding-left: 1em;
+          color: #575757;
+          font-weight: bold;
+          bottom: 34px;
+          
+     
+      }
+
+
+      .btn{
+          margin-top: 1em;
+          margin-right: 20px;
+      }
+
+  }
+}
+   .categorie{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .categorie h1{
+    font-family: cursive;
+    font-size: 84px;
+    font-size: 2em;
+    white-space: nowrap;
+    
+  }
+  .categorie-list{
+    width: 80vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  } 
+  
+  .categorie-list span {
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    margin: 24px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+  .categorie-list span :hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+  
+  .categorie-list img  {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 70%;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 39px;
+  }
+  
+  .categorie-list   h2
+   {
+    margin-left: 55px;
+  }

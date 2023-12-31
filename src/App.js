@@ -1,10 +1,15 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
 import Footer from './Components/Footer';
+import About from './Components/About';
+import Contact from './Components/Contact';
 import Header from './Components/Header';
 import Home from './Components/Myhome/Home';
 import AllRecepies from './Components/AllRecepies/AllRecepies';
 import RecepyDetail from './Components/RecepyDetail/RecepyDetail';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(fab);
 
 function App() {
   return (
@@ -12,7 +17,9 @@ function App() {
       <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/AllRecepies' element={<AllRecepies />} />
+          <Route path='/Contact' element={<Contact />} />
+          <Route path='/About' element={<About />} />
+          <Route path='/Menu' element={<AllRecepies />} />
           <Route path='/RecepyDetail' element={<RecepyDetail />} />
         </Routes>
       <Footer />

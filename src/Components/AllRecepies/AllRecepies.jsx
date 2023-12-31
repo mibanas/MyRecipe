@@ -17,3 +17,6 @@ const AllRecepies = () => {
 }
 
 export default AllRecepies
+
+
+// import "../Assets/styles/About.css"; 
