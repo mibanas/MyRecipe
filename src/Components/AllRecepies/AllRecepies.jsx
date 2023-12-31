@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../../Assets/styles/allRecepies.css';
 
 // ============= Assets ============= 
+
+// icons 
 import next from '../../Assets/Icons/next.svg'
 import nextt from '../../Assets/Icons/next.png'
 import back from '../../Assets/Icons/back.png'
@@ -10,7 +12,10 @@ import noback from '../../Assets/Icons/noback.png'
 import star from '../../Assets/Icons/Star.svg'
 import reset from '../../Assets/Icons/reset.png'
 import add from '../../Assets/Icons/add.png'
+
+// images 
 import plat1 from '../../Assets/img/plat1.jpeg'
+import platimage from '../../Assets/img/platimage.jpg'
 
 
 const AllRecepies = () => {
