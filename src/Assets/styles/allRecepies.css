@@ -2,22 +2,123 @@
 
 .AllRecepies {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 /* ==================== Images ====================  */
 
 .AllRecepies-image {
     border-radius: 30px;
-    width: 1264px;
-    height: 355px;
+    width: 90%;
+    height: 500px;
     flex-shrink: 0;
-    background-color: aquamarine;
+    background-image: url(../img/platimage1.jpg);
+    background-size: cover;
+    margin-bottom: 30px;
 }
 
 /* ==================== filres =====================  */
 
+.AllRecepies-filres {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
+}
+
+.AllRecepies-category {
+    display: flex;
+    width: 236.8px;
+    height: 86px;
+    padding: 30px 29.8px 30px 29px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #39DB4A;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.AllRecepies-category  {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 127%; /* 20.32px */
+}
+
+.AllRecepies-icon {
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
 /* ==================== Products =====================  */
+
+.AllRecepies-products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.AllRecepies-product {
+    width: 305px;
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #FFF;
+    /* background: #39DB4A; */
+    box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px 0px rgba(12, 26, 75, 0.24);
+    margin: 40px;
+
+}
+
+.AllRecepies-product img {
+    width: 289px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+
+.AllRecepies-product-name {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AllRecepies-product-name h1 {
+    color: #252525;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 120% */
+    margin-right: 90px;
+}
+
+.AllRecepies-product-name img {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-right: 5px;
+
+}
+
+.AllRecepies-product-name h2{
+    color: #ADADAD;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 

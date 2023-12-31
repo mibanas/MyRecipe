@@ -45,7 +45,7 @@
     {
         "id": 1,
         "nom": "Pizza Margherita",
-        "origine": "Italie",
+        "origine": 1,
         "ingredients": ["pâte à pizza", "sauce tomate", "mozzarella", "basilic"],
         "popularite": 4.5,
         "image": "lien_image_pizza.jpg"
@@ -53,7 +53,7 @@
       {
         "id": 2,
         "nom": "Sushi au saumon",
-        "origine": "Japon",
+        "origine": 2,
         "ingredients": ["riz", "saumon frais", "algue nori", "wasabi", "gingembre mariné"],
         "popularite": 4.8,
         "image": "lien_image_sushi.jpg"
@@ -61,7 +61,7 @@
       {
         "id": 3,
         "nom": "Tacos au poulet",
-        "origine": "Mexique",
+        "origine": 3,
         "ingredients": ["tortilla", "poulet grillé", "salsa", "fromage", "laitue"],
         "popularite": 4.2,
         "image": "lien_image_tacos.jpg"
@@ -69,7 +69,7 @@
       {
         "id": 4,
         "nom": "Pad Thai",
-        "origine": "Thaïlande",
+        "origine": 4,
         "ingredients": ["nouilles de riz", "crevettes", "tofu", "cacahuètes", "citron"],
         "popularite": 4.6,
         "image": "lien_image_pad_thai.jpg"
@@ -77,7 +77,7 @@
       {
         "id": 5,
         "nom": "Hamburger classique",
-        "origine": "États-Unis",
+        "origine": 5,
         "ingredients": ["pain à hamburger", "steak de bœuf", "fromage", "laitue", "tomate"],
         "popularite": 4.3,
         "image": "lien_image_hamburger.jpg"
@@ -85,7 +85,7 @@
       {
         "id": 6,
         "nom": "Ramen au porc",
-        "origine": "Japon",
+        "origine": 2,
         "ingredients": ["nouilles de ramen", "porc braisé", "œuf", "oignons verts"],
         "popularite": 4.7,
         "image": "lien_image_ramen.jpg"
@@ -93,7 +93,7 @@
       {
         "id": 7,
         "nom": "Ceviche de crevettes",
-        "origine": "Pérou",
+        "origine": 6,
         "ingredients": ["crevettes fraîches", "citron vert", "oignon rouge", "coriandre"],
         "popularite": 4.4,
         "image": "lien_image_ceviche.jpg"
@@ -101,7 +101,7 @@
       {
         "id": 8,
         "nom": "Pâtes carbonara",
-        "origine": "Italie",
+        "origine": 1,
         "ingredients": ["spaghetti", "guanciale", "œufs", "parmesan"],
         "popularite": 4.1,
         "image": "lien_image_carbonara.jpg"
@@ -109,7 +109,7 @@
       {
         "id": 9,
         "nom": "Salade César",
-        "origine": "États-Unis",
+        "origine": 5,
         "ingredients": ["laitue romaine", "poulet grillé", "croûtons", "parmesan", "sauce César"],
         "popularite": 4.0,
         "image": "lien_image_cesar.jpg"
@@ -117,7 +117,7 @@
       {
         "id": 10,
         "nom": "Couscous aux légumes",
-        "origine": "Maghreb",
+        "origine": 7,
         "ingredients": ["couscous", "pois chiches", "carottes", "courgettes", "épices"],
         "popularite": 3.9,
         "image": "lien_image_couscous.jpg"
