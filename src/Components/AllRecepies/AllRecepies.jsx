@@ -15,7 +15,6 @@ import add from '../../Assets/Icons/add.png'
 
 // images 
 import plat1 from '../../Assets/img/plat1.jpeg'
-import platimage from '../../Assets/img/platimage.jpg'
 
 
 const AllRecepies = () => {
