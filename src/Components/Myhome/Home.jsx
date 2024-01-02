@@ -1,5 +1,8 @@
 import React from 'react'
 import image from "../../Assets/img/circle.png"
+import image0 from "../../Assets/img/Girlcircle.png"
+
+
 import picture from "../../Assets/img/Intersect.png"
 import { Link } from 'react-router-dom'
 import "../../Assets/styles/home.css"
@@ -32,7 +35,7 @@ function Home() {
 
       <div className="home">
         <div className="header">
-          <img src={image} alt="" />
+          <img src={image0} alt="" />
         </div>
         <div className="home-text">
           <h1 className="primary-heading">
@@ -45,9 +48,9 @@ function Home() {
             <button className="btn">TRY NOW</button>
           </Link>
         </div>
-        <div className="home-image-section">
+        {/* <div className="home-image-section">
           <img src={picture} alt="" className="center" />
-        </div>
+        </div> */}
         <div className="section improve-skills flex items-center justify-center min-h-screen">
           <div className="col img">
             <img src={img_10} alt="" />
