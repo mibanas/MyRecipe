@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react'
 import img10 from "../Assets/img/pex.jpg";
 import "../Assets/styles/About.css"; 
-function About() {
+
+const About = () => {
   return (
     <div className="about">
-      <div
-        className="aboutTop"
-        style={{ backgroundImage: `url(${img10})` }}
-      ></div>
+      <div className="aboutTop">
+          <img src={img10} alt="" />
+        </div>
       <div className="aboutBottom">
         <h1> ABOUT US</h1>
         <p>
-        <span className="f">F</span>Oodies is a place where you can please your soul and 
+        <span>F</span>oodies is a place where you can please your soul and 
         tummy with delicious food recepies of all cuisine. And our service is absolutely
          free ipsum dolor sit amet consectetur adipisicing elit. Maxime
           mollitia, molestiae quas vel sint commodi repudiandae consequuntur
@@ -29,7 +29,7 @@ function About() {
         </p>
       </div>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

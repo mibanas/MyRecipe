@@ -1,5 +1,5 @@
 import React from "react";
-import img10 from "../Assets/img/pex.jpg";
+import img10 from "../Assets/img/contactus.jpg";
 import "../Assets/styles/Contact.css"; 
 
 
