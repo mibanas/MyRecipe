@@ -14,21 +14,24 @@
     padding-left: 10%;
 }
 .nav .leftSide img{
-    width: 7%;
+    width: 8%;
 }
 .nav .leftSide .logo{
     background-color: rgb(0, 255, 68);
-    width: 4%;
+    width: 5%;
 }
 .nav .rightSide{
     flex: 10%;
     height: 100%;
+    font-size:x-large ;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     letter-spacing: px;
     position: relative;
-    left: 10px;
+    left: 2px;
     gap: 10px; 
 }
 .rightSide a {
