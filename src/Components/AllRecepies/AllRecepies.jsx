@@ -110,6 +110,7 @@ const AllRecepies = () => {
 
 			</div>
 		
+		
 
           	{categories.map((categories, index) => {
 				console.log('min', intervalCategory.min ,'max', intervalCategory.max);
