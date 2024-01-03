@@ -13,6 +13,7 @@
     width: 45vw;
     height: 560px;
     padding: 20px;
+    border-radius: 60px;
 }
 
 .details {
@@ -40,9 +41,9 @@
 }
 
 .ratings small {
-    margin-left: 20px;
     margin-top: 2px;
     font-size: 15px;
+    font-weight: 600;
 }
 
 #ingredients {
@@ -52,7 +53,6 @@
 
 #star {
     color: red;
-    margin: 0 5px;
     margin-right: 20px;
 }
 
