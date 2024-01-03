@@ -1,0 +1,84 @@
+.recepyContainer {
+    width: 90vw;
+    height: 90vh;
+    margin-top: 30px;
+    margin-left: 5vw;
+    margin-bottom:  30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+#recipeImage {
+    width: 45vw;
+    height: 560px;
+    padding: 20px;
+}
+
+.details {
+    padding-top: 5vh;
+}
+
+#platNom {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.ratings {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.ratings span {
+    color: #5FE26C;
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 20px;
+    font-style: italic;
+}
+
+.ratings small {
+    margin-left: 20px;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+#ingredients {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#star {
+    color: red;
+    margin: 0 5px;
+    margin-right: 20px;
+}
+
+.details li {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+#update {
+    background-color: #5FE26C;
+    padding: 8px 25px;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+#delete {
+    background-color: red;
+    padding: 8px 25px;
+    color: wheat;
+    font-weight: 600;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+
+#update, #delete {
+    position: relative;
+    top: 180px;
+}
