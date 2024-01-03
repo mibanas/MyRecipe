@@ -26,8 +26,9 @@ export default function Contact() {
             placeholder="Enter message"
             required
           ></textarea>
-          <button type="Submit" onClick={notify}>Send Message</button>
           <ToastContainer />
+          <button type="Submit" onClick={notify}>Send Message</button>
+          
 
         </form>
       </div>
