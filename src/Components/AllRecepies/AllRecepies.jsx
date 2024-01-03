@@ -151,7 +151,7 @@ const AllRecepies = () => {
 			{plats.map((plats) => {
 				return(
 					<div className="AllRecepies-product">
-						<img  src={plat1} alt="" />
+						<img src={plat1} alt="" />
 						<div className="AllRecepies-product-name">
 							<h1>{plats.nom}</h1>
 							<img src={star} alt="" />
