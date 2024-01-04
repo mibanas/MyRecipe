@@ -9,6 +9,8 @@ import AllRecepies from './Components/AllRecepies/AllRecepies';
 import RecepyDetail from './Components/RecepyDetail/RecepyDetail';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import AddRecipe from './Components/Recipes/AddRecipe';
+
 library.add(fab);
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
           <Route path='/About' element={<About />} />
           <Route path='/Menu' element={<AllRecepies />} />
           <Route path='/recepy_detail/:id' element={<RecepyDetail />} />
+          <Route path='/add-product' element={<AddRecipe />} />
         </Routes>
       <Footer />
     </div>

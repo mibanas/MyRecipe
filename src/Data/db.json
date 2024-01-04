@@ -359,6 +359,18 @@
       ],
       "popularite": 3.9,
       "image": "lien_image_couscous_royal.jpg"
+    },
+    {
+      "nom": "cosoc",
+      "origine": "3",
+      "ingredients": [
+        "huzd",
+        "ihiuz",
+        "uz"
+      ],
+      "popularite": "2",
+      "image": "http://res.cloudinary.com/db4rh6kdl/image/upload/v1704383928/mcp4wcfxnjpoejfzyqdr.jpg",
+      "id": 31
     }
   ]
 }
