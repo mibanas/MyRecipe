@@ -20,7 +20,8 @@ const AddRecipe = () => {
   // ______________________________
   // To take a rating value
   const handleRating = (e) => {
-    setRating(e.target.value)
+    const ratingCatched = parseInt(e.target.value, 10);
+    setRating(ratingCatched)
   }
 
   // ______________________________
@@ -109,7 +110,8 @@ const AddRecipe = () => {
   // ______________________________________________________________ 
   // Handling origine:
   const handleOnSelect = (e) => {
-    setSelectedOrigine(e.target.value)
+    const origineId = parseInt(e.target.value, 10);
+    setSelectedOrigine(origineId)
   }
 
   // To get origines

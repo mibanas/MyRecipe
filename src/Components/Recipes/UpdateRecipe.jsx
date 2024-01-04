@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
-const UpdateProduct = () => {
+const UpdateRecipe = () => {
 
     // Global vars :
 
@@ -14,6 +14,8 @@ const UpdateProduct = () => {
     const imageRef = useRef(null)
     const [imageUrl, setImageUrl] = useState(null)
     const ingredientsRef = useRef(null);
+
+    const navigation = useNavigate();
 
     // ______________________________
 
@@ -31,19 +33,24 @@ const UpdateProduct = () => {
             const response = await axios.get(`http://localhost:3000/plats/${id}`);
             const bodyData = await response.data;
 
-            console.log(bodyData.ingredients)
+            console.log('Body returned: ', bodyData)
+            // console.log(bodyData.ingredients)
             // console.log(bodyData.ingredients[0])
 
             if (ingredientsRef.current) {
-                console.log(bodyData.ingredients.join('\n'))
+                // console.log(bodyData.ingredients.join('\n'))
+                console.log(bodyData.ingredients.join(', '))
                 ingredientsRef.current.value = bodyData.ingredients.join(', ');
             }
 
             setData(bodyData)
             setNom(bodyData.nom)
             setSelectedOrigine(bodyData.origine) // To get origine id
+            console.log('Origine id : ', bodyData.origine)
             setRating(bodyData.popularite) // To get rating
             setImageUrl(bodyData.image)
+            console.log('Image : ', bodyData.image)
+            // imageRef.current.files[0] = bodyData.image;
 
 
 
@@ -71,15 +78,22 @@ const UpdateProduct = () => {
 
     // Handling origine selected :
     const handleOnSelect = (e) => {
-        setSelectedOrigine(e.target.value)
+        const origineId = parseInt(e.target.value, 10);
+        setSelectedOrigine(origineId)
     }
 
+    // To take a rating value
+  const handleRating = (e) => {
+    const ratingCatched = parseInt(e.target.value, 10);
+    setRating(ratingCatched)
+  }
+ 
     const handleNom = (e) => {
         setNom(e.target.value)
     }
 
     // ______________________________________________________________ 
-    // Function to handle upload image to cloudinary server
+    // Function to handle upload image to Cloudinary server
     const handleUploadImage = async (image) => {
         try {
 
@@ -102,32 +116,55 @@ const UpdateProduct = () => {
     }
     // ______________________________________________________________ 
 
-    // handling update
+    // Function to handle form submission update
     const handleOnUpdate = async (e) => {
 
         e.preventDefault();
 
+        // Check validation:
+        if (!nom || !ingredientsRef.current.value || !rating || !selectedOrigine) {
+            console.error("Please fill in all required fields");
+            alert("Please fill in all required fields")
+            return;
+        }
+
         try {
 
             const updatedIngredients = ingredientsRef.current.value.split(",").map((ingredient) => ingredient.trim());
-            const image = imageRef.current.files[0];
+            let newImage = imageRef.current.files[0]; 
 
-            // Calling the func for handling image and awaiting for image processing
-            const imageUrl = await handleUploadImage(image)
+            // If a new file is selected, upload it to Cloudinary
+            // Check if the image is not empty, the new image selected
+            if (newImage) {
+                // take the new image selected
+                // Calling the func for handling image and awaiting for image processing
+                const imageUrlUpdated = await handleUploadImage(newImage)
+                // Update the image URL
+                // setImageUrl(imageUrl)
+                newImage = imageUrlUpdated;
+            } else {
+                // if the image not changed so newImage is vide then we have to take the old url image from json-server that stored in imageUrl state
+                newImage = imageUrl;
+            }
+
 
             const response = await axios.put(`http://localhost:3000/plats/${id}`, {
                 nom: nom,
-                origin: selectedOrigine,
+                origine: selectedOrigine,
                 ingredients: updatedIngredients,
                 popularite: rating,
-                image: imageUrl
+                image: newImage
 
             })
 
             const updatedData = await response.data;
-            console.log(updatedData)
+            console.log('body', updatedData)
+
+            // Clear data ____________________
+            // clearInputs();
 
             console.log("Updated successfully !")
+            navigation('/Menu')
 
         } catch (error) {
             console.log("Error updating !", error)
@@ -155,6 +192,8 @@ const UpdateProduct = () => {
                 />
 
                 <label className="mb-5 mt-5 font-bold text-191919">Choose an origine:</label>
+                {/* {
+                    selectedOrigine && ( */}
                 <select value={selectedOrigine} onChange={handleOnSelect} className="w-1/2 p-3 border-2 border-#191919 rounded-lg ">
                     {origines &&
                         origines.map((origine, index) => (
@@ -163,6 +202,9 @@ const UpdateProduct = () => {
                             </option>
                         ))}
                 </select>
+                {/* )
+                } */}
+
 
                 <label className="mb-5 mt-5 font-bold text-191919">Ingredients: (séparés par des virgules):</label>
                 <textarea
@@ -174,7 +216,7 @@ const UpdateProduct = () => {
 
                 <input
                     value={rating}
-                    onChange={(e) => setRating(e.target.value)}
+                    onChange={handleRating}
                     type="number"
                     min="0"
                     max="5"
@@ -218,4 +260,4 @@ const UpdateProduct = () => {
     )
 }
 
-export default UpdateProduct
+export default UpdateRecipe
