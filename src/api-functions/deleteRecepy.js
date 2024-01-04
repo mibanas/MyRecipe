@@ -13,7 +13,7 @@ const deleteClick = (plat, navigate) => {
       confirmButtonText: "Delete",
       denyButtonText: "Cancel",
       confirmButtonColor: "red",
-      denyButtonColor: "#5FE26C"
+      denyButtonColor: "#5FE26C",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:3000/plats/${plat.id}`, {

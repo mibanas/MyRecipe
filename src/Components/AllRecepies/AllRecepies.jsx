@@ -15,6 +15,7 @@ import add from '../../Assets/Icons/add.png'
 
 // images 
 import plat1 from '../../Assets/img/plat1.jpeg'
+import { Link } from 'react-router-dom';
 
 
 const AllRecepies = () => {
@@ -154,7 +155,7 @@ const AllRecepies = () => {
 					<div className="AllRecepies-product">
 						<img src={plat1} alt="" />
 						<div className="AllRecepies-product-name">
-							<h1>{plats.nom}</h1>
+							<Link to={`/recepy_detail/${plats.id}`}><h1>{plats.nom}</h1></Link>
 							<img src={star} alt="" />
 							<h2>{plats.popularite}</h2>
 						</div>

@@ -21,8 +21,10 @@ const RecepyDetail = () => {
       const response = await fetch(`http://localhost:3000/plats/${id}`)
 
       if (!response.ok) {
+        navigate('/menu')
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
+
 
       const data = await response.json()
 
@@ -85,5 +87,6 @@ const RecepyDetail = () => {
     </div>
   )
 }
+
 
 export default RecepyDetail
