@@ -20,7 +20,8 @@ const AddRecipe = () => {
   // ______________________________
   // To take a rating value
   const handleRating = (e) => {
-    setRating(e.target.value)
+    const ratingCatched = parseInt(e.target.value, 10);
+    setRating(ratingCatched)
   }
 
   // ______________________________
@@ -109,7 +110,8 @@ const AddRecipe = () => {
   // ______________________________________________________________ 
   // Handling origine:
   const handleOnSelect = (e) => {
-    setSelectedOrigine(e.target.value)
+    const origineId = parseInt(e.target.value, 10);
+    setSelectedOrigine(origineId)
   }
 
   // To get origines
@@ -183,7 +185,11 @@ const AddRecipe = () => {
       </div>
 
       <label className="mb-5 mt-5 font-bold text-191919">Images:</label>
-      <input type="file" ref={imageRef} className="w-1/2 p-3 border-2 border-#191919 rounded-lg" onChange={handleImageChange} />
+      <input
+        type="file"
+        ref={imageRef}
+        className="w-1/2 p-3 border-2 border-#191919 rounded-lg"
+        onChange={handleImageChange} />
 
       {/* Display selected image */}
       {imageUrl && (
