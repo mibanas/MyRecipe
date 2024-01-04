@@ -22,10 +22,13 @@ Assurez-vous d'avoir Node.js installé sur votre machine.
 ```bash
 npm install
 
-###Exécution de JSON Server pour les Données de Recettes
-Avant de lancer l'application React, assurez-vous que JSON Server est en cours d'exécution sur le port 3000 :
+###Exécution de JSON Server pour les Données de Recettes Avant de lancer l'application React, assurez-vous que JSON Server est en cours d'exécution sur le port 3000 :
+
+```bash
 json-server --watch src/data/db.json --port 3000
 
 ### Exécution de l'Application React
+
+```bash
 npm start
 
