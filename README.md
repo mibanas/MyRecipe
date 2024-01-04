@@ -18,17 +18,11 @@ Bienvenue dans le Livre de Recettes en Ligne, une plateforme interactive pour d�
 Assurez-vous d'avoir Node.js installé sur votre machine.
 
 ### Installation des Dépendances
-
-```bash
-npm install
-
-###Exécution de JSON Server pour les Données de Recettes Avant de lancer l'application React, assurez-vous que JSON Server est en cours d'exécution sur le port 3000 :
-
-```bash
-json-server --watch src/data/db.json --port 3000
-
+### Exécution de JSON Server pour les Données de Recettes Avant de lancer l'application React, assurez-vous que JSON Server est en cours d'exécution sur le port 3000 
 ### Exécution de l'Application React
 
 ```bash
+npm install
+json-server --watch src/data/db.json --port 3000
 npm start
 
