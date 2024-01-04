@@ -183,7 +183,11 @@ const AddRecipe = () => {
       </div>
 
       <label className="mb-5 mt-5 font-bold text-191919">Images:</label>
-      <input type="file" ref={imageRef} className="w-1/2 p-3 border-2 border-#191919 rounded-lg" onChange={handleImageChange} />
+      <input
+        type="file"
+        ref={imageRef}
+        className="w-1/2 p-3 border-2 border-#191919 rounded-lg"
+        onChange={handleImageChange} />
 
       {/* Display selected image */}
       {imageUrl && (
