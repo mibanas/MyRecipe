@@ -361,16 +361,49 @@
       "image": "lien_image_couscous_royal.jpg"
     },
     {
-      "nom": "cosoc",
-      "origine": "3",
+      "nom": "tacos",
+      "origine": 3,
       "ingredients": [
-        "huzd",
-        "ihiuz",
-        "uz"
+        "ble",
+        "eau",
+        "tatata"
       ],
-      "popularite": "2",
-      "image": "http://res.cloudinary.com/db4rh6kdl/image/upload/v1704383928/mcp4wcfxnjpoejfzyqdr.jpg",
-      "id": 31
+      "popularite": 4,
+      "image": "http://res.cloudinary.com/db4rh6kdl/image/upload/v1704395436/ss0ggb8l0ojkppepmyic.jpg",
+      "id": 32
+    },
+    {
+      "nom": "kika",
+      "origine": 5,
+      "ingredients": [
+        "ble",
+        "mhamssa"
+      ],
+      "popularite": 4,
+      "image": "http://res.cloudinary.com/db4rh6kdl/image/upload/v1704397962/trsgmazryhifdmbfheyw.jpg",
+      "id": 33
+    },
+    {
+      "nom": "crep",
+      "origine": 3,
+      "ingredients": [
+        "frite",
+        "huz"
+      ],
+      "popularite": 2,
+      "image": "http://res.cloudinary.com/db4rh6kdl/image/upload/v1704398836/bsgku5tpinlu6efsbx1w.jpg",
+      "id": 34
+    },
+    {
+      "nom": "salade",
+      "origine": 5,
+      "ingredients": [
+        "zdz",
+        "dz"
+      ],
+      "popularite": 3,
+      "image": "http://res.cloudinary.com/db4rh6kdl/image/upload/v1704399202/mnxqygjra1kxij10aoz0.jpg",
+      "id": 35
     }
   ]
 }

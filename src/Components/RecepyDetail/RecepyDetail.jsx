@@ -2,16 +2,16 @@ import React, { useCallback, useEffect, useState } from 'react'
 import '../../Assets/styles/recipe.css';
 import recipeImageTest from "../../Assets/img/plat1.jpeg"
 import star from '../../Assets/Icons/Star.svg'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import deleteRecepy from '../../api-functions/deleteRecepy';
 import { useNavigate } from 'react-router-dom';
 
 
 const RecepyDetail = () => {
 
-  const [ plat , setPlat ] = useState({});
-  const [ originCountryNumber, setoriginCountryNumber ] = useState("");
-  const [ originCountry, setoriginCountry ] = useState("");
+  const [plat, setPlat] = useState({});
+  const [originCountryNumber, setoriginCountryNumber] = useState("");
+  const [originCountry, setoriginCountry] = useState("");
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -45,14 +45,14 @@ const RecepyDetail = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      
+
       const data = await response.json()
 
       setoriginCountry(data.nom)
     } catch (error) {
       console.log(error);
     }
-  },[])
+  }, [])
 
 
   useEffect(() => {
@@ -80,7 +80,11 @@ const RecepyDetail = () => {
           })}
         </ul>
         <div className="btns">
-          <a id='update' href="#">update</a>
+          <Link to={`/update-product/${plat.id}`} >
+            {/* <a id='update' href="#">update</a> */}
+            <a id='update'>update</a>
+          </Link>
+          {/* <Link to={`/update-product/${plat.id}`} >update</Link> */}
           <a id='delete' href="#" onClick={() => deleteRecepy(plat, navigate)}>delete</a>
         </div>
       </div>
