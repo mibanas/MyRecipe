@@ -77,30 +77,30 @@ npm start
 ### Dependencies
 **List of project dependencies:**
 
-@fortawesome/fontawesome-svg-core
-@fortawesome/free-brands-svg-icons
-@fortawesome/free-solid-svg-icons
-@fortawesome/react-fontawesome
-axios
-json-server
-react
-react-dom
-react-icons
-react-router-dom
-sweetalert2
-sweetalert2-react-content
-web-vitals
+- @fortawesome/fontawesome-svg-core
+- @fortawesome/free-brands-svg-icons
+- @fortawesome/free-solid-svg-icons
+- @fortawesome/react-fontawesome
+- axios
+- json-server
+- react
+- react-dom
+- react-icons
+- react-router-dom
+- sweetalert2
+- sweetalert2-react-content
+- web-vitals
 
 **Dev Dependencies:**
 List of development dependencies:
 
-tailwindcss
-vite
-webpack
-webpack-cli
+- tailwindcss
+- vite
+- webpack
+- webpack-cli
 
 ## Author
- [AIT M'BAREK Youness](https://github.com/YNS-JNS).
+[AIT M'BAREK Youness](https://github.com/YNS-JNS).
 [Mohamed Sanabi](https://github.com/mibanas).
 [Imane Ouarid](https://github.com/imaneouarid).
 [Lhoussine ...](https://github.com/).
