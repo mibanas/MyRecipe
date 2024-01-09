@@ -15,22 +15,25 @@ const UpdateRecipe = () => {
     const [imageUrl, setImageUrl] = useState(null)
     const ingredientsRef = useRef(null);
 
+    // ______________________________________________________________ 
     const navigation = useNavigate();
-
-    // ______________________________
+    // ______________________________________________________________ 
 
     // Get params
     const { id } = useParams();
     // console.log('id of product :', id)
 
+    // ______________________________________________________________ 
+
     // Global variables:
     const [data, setData] = useState(null)
 
+    // ______________________________________________________________ 
 
     // get the product by id
     const getPlat = async () => {
         try {
-            const response = await axios.get(`http://localhost:3000/plats/${id}`);
+            const response = await axios.get(`http://localhost:5000/plats/${id}`);
             const bodyData = await response.data;
 
             console.log('Body returned: ', bodyData)
@@ -59,9 +62,11 @@ const UpdateRecipe = () => {
         }
     }
 
+    // ______________________________________________________________ 
+
     // To get origines
     const getOrigines = () => {
-        axios.get(`http://localhost:3000/origines`)
+        axios.get(`http://localhost:5000/origines`)
             .then(response => {
                 setOrigines(response.data);
             })
@@ -75,6 +80,7 @@ const UpdateRecipe = () => {
 
     }, [])
 
+    // ______________________________________________________________ 
 
     // Handling origine selected :
     const handleOnSelect = (e) => {
@@ -82,17 +88,22 @@ const UpdateRecipe = () => {
         setSelectedOrigine(origineId)
     }
 
+    // ______________________________________________________________ 
+    
     // To take a rating value
-  const handleRating = (e) => {
-    const ratingCatched = parseInt(e.target.value, 10);
-    setRating(ratingCatched)
-  }
- 
+    const handleRating = (e) => {
+        const ratingCatched = parseInt(e.target.value, 10);
+        setRating(ratingCatched)
+    }
+
+    // ______________________________________________________________ 
+
     const handleNom = (e) => {
         setNom(e.target.value)
     }
 
     // ______________________________________________________________ 
+
     // Function to handle upload image to Cloudinary server
     const handleUploadImage = async (image) => {
         try {
@@ -114,6 +125,7 @@ const UpdateRecipe = () => {
 
 
     }
+
     // ______________________________________________________________ 
 
     // Function to handle form submission update
@@ -131,7 +143,7 @@ const UpdateRecipe = () => {
         try {
 
             const updatedIngredients = ingredientsRef.current.value.split(",").map((ingredient) => ingredient.trim());
-            let newImage = imageRef.current.files[0]; 
+            let newImage = imageRef.current.files[0];
 
             // If a new file is selected, upload it to Cloudinary
             // Check if the image is not empty, the new image selected
@@ -148,7 +160,7 @@ const UpdateRecipe = () => {
             }
 
 
-            const response = await axios.put(`http://localhost:3000/plats/${id}`, {
+            const response = await axios.put(`http://localhost:5000/plats/${id}`, {
                 nom: nom,
                 origine: selectedOrigine,
                 ingredients: updatedIngredients,
@@ -173,16 +185,15 @@ const UpdateRecipe = () => {
 
     }
 
-    // handling if data is empty
+    
     if (!data) {
         return <div>Loading ...</div>
     }
 
-    // if there isn't any prob
     return (
         data && (
             <form onSubmit={handleOnUpdate} className="bg-f4f4f4 p-20 border-radius-5 flex justify-center flex-col">
-                <label className="mb-5 font-bold text-191919">Recipe name:</label>
+                <label className="mb-5 font-bold text-191919">Nom de la recette:</label>
                 <input
                     value={nom}
                     onChange={handleNom}
@@ -191,7 +202,7 @@ const UpdateRecipe = () => {
                     className="w-1/2 p-3 border-2 border-#191919 rounded-lg"
                 />
 
-                <label className="mb-5 mt-5 font-bold text-191919">Choose an origine:</label>
+                <label className="mb-5 mt-5 font-bold text-191919">Choisissez votre origine:</label>
                 {/* {
                     selectedOrigine && ( */}
                 <select value={selectedOrigine} onChange={handleOnSelect} className="w-1/2 p-3 border-2 border-#191919 rounded-lg ">
@@ -206,13 +217,13 @@ const UpdateRecipe = () => {
                 } */}
 
 
-                <label className="mb-5 mt-5 font-bold text-191919">Ingredients: (séparés par des virgules):</label>
+                <label className="mb-5 mt-5 font-bold text-191919">Entrez vos ingredients: (séparés par des virgules):</label>
                 <textarea
                     ref={ingredientsRef}
                     type="text"
-                    placeholder="Enter the Ingredients (séparés par des virgules)..." rows="4" className="w-1/2 p-3 border-2 border-#191919 rounded-lg" />
+                    placeholder="" rows="4" className="w-1/2 p-3 border-2 border-#191919 rounded-lg" />
 
-                <label className="mb-5 mt-5 font-bold text-191919">Popularite:</label>
+                <label className="mb-5 mt-5 font-bold text-191919">Popularité:</label>
 
                 <input
                     value={rating}
@@ -232,7 +243,7 @@ const UpdateRecipe = () => {
                     <span className="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
                 </div>
 
-                <label className="mb-5 mt-5 font-bold text-191919">Images:</label>
+                <label className="mb-5 mt-5 font-bold text-191919">Entrez votre image:</label>
                 <input type="file"
                     ref={imageRef}
                     onChange={() => {
@@ -253,7 +264,7 @@ const UpdateRecipe = () => {
                 )}
 
                 <button type="submit" className="w-1/2 p-3 mt-5 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                    Update Recipe
+                    Modifier la recette
                 </button>
             </form>
         )

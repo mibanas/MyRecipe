@@ -27,7 +27,7 @@ const AllRecepies = () => {
 	useEffect(() => {
 		const getAllCaterogies = async () => {
 			try {
-				const response = await fetch('http://localhost:3000/origines');
+				const response = await fetch('http://localhost:5000/origines');
 
 				if (!response.ok) {
 					throw new Error(`HTTP error! Status: ${response.status}`);
@@ -48,7 +48,7 @@ const AllRecepies = () => {
 	useEffect(() => {
 		const getAllProducts = async () => {
 			try {
-				const response = await fetch('http://localhost:3000/plats')
+				const response = await fetch('http://localhost:5000/plats')
 				const data = await response.json()
 
 				setPlats(data)
@@ -81,12 +81,12 @@ const AllRecepies = () => {
 		console.log(origine);
 		try {
 			if (origine !== 'reset') {
-				const response = await fetch(`http://localhost:3000/plats?origine=${origine}`)
+				const response = await fetch(`http://localhost:5000/plats?origine=${origine}`)
 				const data = await response.json()
 				setPlats(data)
 				console.log(data);
 			} else {
-				const response = await fetch(`http://localhost:3000/plats`)
+				const response = await fetch(`http://localhost:5000/plats`)
 				const data = await response.json()
 				setPlats(data)
 				console.log(data);

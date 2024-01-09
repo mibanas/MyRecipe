@@ -11,20 +11,41 @@ const AddRecipe = () => {
   const [origines, setOrigines] = useState([]) // To store origines
   const [selectedOrigine, setSelectedOrigine] = useState(null) // To get origine id selected
   const [imageUrl, setImageUrl] = useState(null);
-  // ______________________________
+
+  // ______________________________________________________________ 
+
   // handling inputs:
   const handleNom = (e) => {
     setNom(e.target.value)
   }
 
-  // ______________________________
+  // ______________________________________________________________ 
+
   // To take a rating value
   const handleRating = (e) => {
-    const ratingCatched = parseInt(e.target.value, 10);
+    const ratingCatched = parseInt(e.target.value, 10); // Convert it to Integer
     setRating(ratingCatched)
   }
 
-  // ______________________________
+  // ______________________________________________________________ 
+
+  // Handling origine:
+  const handleOnSelect = (e) => {
+    const origineId = parseInt(e.target.value, 10);
+    setSelectedOrigine(origineId)
+  }
+
+  // ______________________________________________________________ 
+
+  const handleImageChange = () => {
+    const file = imageRef.current.files[0];
+    if (file) {
+      const imageUrl = URL.createObjectURL(file);
+      setImageUrl(imageUrl);
+    }
+  };
+
+  // ______________________________________________________________ 
 
   // Clear input values and file input
   const clearInputs = () => {
@@ -38,6 +59,7 @@ const AddRecipe = () => {
   };
 
   // ______________________________________________________________ 
+
   // Function to handle upload image to cloudinary server
   const handleUploadImage = async (image) => {
     try {
@@ -59,8 +81,8 @@ const AddRecipe = () => {
 
 
   }
-  // ______________________________________________________________ 
 
+  // ______________________________________________________________ 
 
   // Main Function :   ____________________________________________
 
@@ -88,7 +110,7 @@ const AddRecipe = () => {
       // ______________________________
 
       // Make Post request to json-server
-      const response = await axios.post(`http://localhost:3000/plats`, {
+      const response = await axios.post(`http://localhost:5000/plats`, {
         nom,
         origine: selectedOrigine,
         ingredients,
@@ -108,17 +130,12 @@ const AddRecipe = () => {
   }
 
   // ______________________________________________________________ 
-  // Handling origine:
-  const handleOnSelect = (e) => {
-    const origineId = parseInt(e.target.value, 10);
-    setSelectedOrigine(origineId)
-  }
 
   // To get origines
   useEffect(() => {
 
     const getOrigines = () => {
-      axios.get(`http://localhost:3000/origines`)
+      axios.get(`http://localhost:5000/origines`)
         .then(response => {
           // console.log(response.data)
           setOrigines(response.data)
@@ -128,31 +145,22 @@ const AddRecipe = () => {
 
     getOrigines();
 
-  }, [])
-
-  const handleImageChange = () => {
-    const file = imageRef.current.files[0];
-    if (file) {
-      const imageUrl = URL.createObjectURL(file);
-      setImageUrl(imageUrl);
-    }
-  };
-
+  }, []);
 
   // ______________________________________________________________ 
 
   return (
     <form onSubmit={handleOnSubmit} className="bg-f4f4f4 p-20 border-radius-5 flex justify-center flex-col">
-      <label className="mb-5 font-bold text-191919">Recipe name:</label>
+      <label className="mb-5 font-bold text-191919">Nom de la recette:</label>
       <input
         value={nom}
         onChange={handleNom}
         type="text"
-        placeholder="Enter recipe name"
+        placeholder="Entrez le nom de la recette"
         className="w-1/2 p-3 border-2 border-#191919 rounded-lg"
       />
 
-      <label className="mb-5 mt-5 font-bold text-191919">Choose an origine:</label>
+      <label className="mb-5 mt-5 font-bold text-191919">Choisissez votre origine:</label>
       <select onChange={handleOnSelect} className="w-1/2 p-3 border-2 border-#191919 rounded-lg ">
         {origines &&
           origines.map((origine, index) => (
@@ -162,10 +170,10 @@ const AddRecipe = () => {
           ))}
       </select>
 
-      <label className="mb-5 mt-5 font-bold text-191919">Ingredients: (séparés par des virgules):</label>
-      <textarea ref={ingredientsRef} type="text" placeholder="Enter the Ingredients (séparés par des virgules)..." rows="4" className="w-1/2 p-3 border-2 border-#191919 rounded-lg" />
+      <label className="mb-5 mt-5 font-bold text-191919">Entrez vos ingredients: (séparés par des virgules):</label>
+      <textarea ref={ingredientsRef} type="text" placeholder="Exemple: Pomme de terre, banana, farine..." rows="4" className="w-1/2 p-3 border-2 border-#191919 rounded-lg" />
 
-      <label className="mb-5 mt-5 font-bold text-191919">Popularite:</label>
+      <label className="mb-5 mt-5 font-bold text-191919">Popularité:</label>
       <input
         value={rating}
         onChange={handleRating}
@@ -184,7 +192,7 @@ const AddRecipe = () => {
         <span className="w-1 h-1 mx-1.5 bg-gray-500 rounded-full dark:bg-gray-400"></span>
       </div>
 
-      <label className="mb-5 mt-5 font-bold text-191919">Images:</label>
+      <label className="mb-5 mt-5 font-bold text-191919">Entrez votre image:</label>
       <input
         type="file"
         ref={imageRef}
@@ -199,7 +207,7 @@ const AddRecipe = () => {
       )}
 
       <button type="submit" className="w-1/2 p-3 mt-5 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-        Add Recipe
+        Ajouter
       </button>
     </form>
   )
