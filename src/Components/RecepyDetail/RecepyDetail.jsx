@@ -18,7 +18,7 @@ const RecepyDetail = () => {
 
   const getPlat = useCallback(async () => {
     try {
-      const response = await fetch(`http://localhost:3000/plats/${id}`)
+      const response = await fetch(`http://localhost:5000/plats/${id}`)
 
       if (!response.ok) {
         navigate('/menu')
@@ -40,7 +40,7 @@ const RecepyDetail = () => {
 
   const getOrigine = useCallback(async (origine) => {
     try {
-      const response = await fetch(`http://localhost:3000/origines/${origine}`)
+      const response = await fetch(`http://localhost:5000/origines/${origine}`)
 
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -62,7 +62,7 @@ const RecepyDetail = () => {
   return (
     <div className='recepyContainer'>
       <div className='image-div'>
-        <img id='recipeImage' src={recipeImageTest} alt="" />
+        <img id='recipeImage' src={plat.image} alt="" />
       </div>
       <div className="details">
         <h1 id='platNom'>{plat.nom}</h1>

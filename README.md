@@ -1,28 +1,127 @@
-# Livre de Recettes en Ligne
+# Recipe Application
 
-Bienvenue dans le Livre de Recettes en Ligne, une plateforme interactive pour découvrir, partager et contribuer à une collection diversifiée de recettes culinaires.
+## Overview
 
-## Fonctionnalités Clés
+This is a Recipe Application built using React.js and json-server as a fake API. The application allows users to view, add, update, and delete recipes.
 
-- **Exploration de Recettes :** Parcourez une variété de recettes classées par catégories telles que les plats principaux, les desserts, les entrées, etc.
-- **Détails de Recette :** Consultez des détails complets sur chaque recette, y compris les ingrédients, les étapes de préparation et des images pour une meilleure visualisation.
-- **Ajout et Modification de Recettes :** Contribuez en ajoutant de nouvelles recettes ou en modifiant celles existantes pour les améliorer.
-- **Suppression de Recettes :** Supprimez des recettes pour garantir la qualité et la pertinence des contenus partagés.
-- **Interface Conviviale :** Une interface utilisateur conviviale et réactive créée avec React.js pour une expérience agréable et intuitive.
-- **Stockage et Récupération des Données :** Utilisation de JSON Server pour stocker et récupérer les données des recettes via une API, facilitant ainsi la gestion des recettes.
+## Table of Contents
 
-## Comment Exécuter le Projet
+- [Recipe Application](#recipe-application)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Dependencies](#dependencies)
+  - [Author](#author)
+  - [Learn More](#learn-more)
+    - [Contributing](#contributing)
+  - [License](#license)
 
-### Prérequis
+## Getting Started
 
-Assurez-vous d'avoir Node.js installé sur votre machine.
+### Prerequisites
 
-### Installation des Dépendances
-### Exécution de JSON Server pour les Données de Recettes Avant de lancer l'application React, assurez-vous que JSON Server est en cours d'exécution sur le port 3000 
-### Exécution de l'Application React
+Before you begin, ensure you have the following installed:
+
+- Node.js
+- npm (Node Package Manager)
+- json-server (for simulating an API server with data)
+
+### Installation
+
+1. **Clone the repository:**
 
 ```bash
-npm install
-json-server --watch src/data/db.json --port 3000
-npm start
+git clone https://github.com/your-username/recipe-application.git
+```
 
+2. **Navigate to the project directory:**
+```bash
+cd recipe-application
+```
+
+3. **Install project dependencies.**
+```bash
+npm install
+```
+
+4. **Install JSON Server**
+```bash
+npm install -g json-server
+```
+
+5. **Create a folder & file like this in : src/Data/db.json file**
+
+
+6. **Add server to scripts in package.json**
+```bash
+"scripts": {
+...
+"server": "json-server --watch db.json --port 5000"}
+```
+
+7. **Start the server**
+```bash
+npm run server
+```
+
+8. **Launch the React application.**
+```bash
+npm start
+```
+
+**The application will be accessible at http://localhost:3000/. & the server will be running at http://localhost:5000**
+
+
+### Dependencies
+**List of project dependencies:**
+
+@fortawesome/fontawesome-svg-core
+@fortawesome/free-brands-svg-icons
+@fortawesome/free-solid-svg-icons
+@fortawesome/react-fontawesome
+axios
+json-server
+react
+react-dom
+react-icons
+react-router-dom
+sweetalert2
+sweetalert2-react-content
+web-vitals
+
+**Dev Dependencies:**
+List of development dependencies:
+
+tailwindcss
+vite
+webpack
+webpack-cli
+
+## Author
+ [AIT M'BAREK Youness](https://github.com/YNS-JNS).
+[Mohamed Sanabi](https://github.com/mibanas).
+[Imane Ouarid](https://github.com/imaneouarid).
+[Lhoussine ...](https://github.com/).
+
+## Learn More
+
+- React.js Documentation: [https://react.dev/](https://react.dev/)
+- json-server Documentation: [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
+
+### Contributing
+If you would like to contribute to this project, please follow the Contribution Guidelines.
+
+If you find issues or want to contribute, follow these steps:
+
+1. Fork the project.
+2. Create a branch for your feature: `git checkout -b feature/NewFeature`.
+3. Commit your changes: `git commit -m "Add New Feature"`.
+4. Push to the branch: `git push origin feature/NewFeature`.
+5. Open a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+Feel free to customize this template according to your project's specific details and structure.

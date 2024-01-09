@@ -24,10 +24,7 @@ export default function Navbar() {
             </svg>
         </div>
           </div>
-            
-            
-                
-          
+             
              <div className="rightSide">
               <Link to="/" className="navLink">Home</Link>
               <Link to="/menu" className="navLink">Recipes</Link>
@@ -36,10 +33,6 @@ export default function Navbar() {
               
             </div>
            
-
-
-
-
         </div>
 
     )
