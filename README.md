@@ -103,7 +103,7 @@ List of development dependencies:
 [AIT M'BAREK Youness](https://github.com/YNS-JNS).
 [Mohamed Sanabi](https://github.com/mibanas).
 [Imane Ouarid](https://github.com/imaneouarid).
-[Lhoussine ...](https://github.com/).
+[Houssain Ijioui](https://github.com/houssain-ijioui).
 
 ## Learn More
 
