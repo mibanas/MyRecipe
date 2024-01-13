@@ -1,71 +1,109 @@
-# Application Recettes Backend
+# Recipe Application
 
-## Aperçu
+## Overview
 
-Il s'agit du backend pour une application de recettes construite avec Node.js et Express.js, avec Swagger pour la documentation de l'API. L'API permet aux utilisateurs de gérer les origines et leur connexion aux recettes en utilisant les identifiants de plat.
+This is a Recipe Application built using React.js and json-server as a fake API. The application allows users to view, add, update, and delete recipes.
 
-## Table des matières
+## Table of Contents
 
-- [Application Recettes Backend](#application-recettes-backend)
-  - [Aperçu](#aperçu)
-  - [Table des matières](#table-des-matières)
-  - [Pour commencer](#pour-commencer)
-    - [Prérequis](#prérequis)
+- [Recipe Application](#recipe-application)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-    - [Exécuter le serveur](#exécuter-le-serveur)
-  - [Documentation de l'API](#documentation-de-lapi)
-  - [Auteur](#auteur)
-  - [En savoir plus](#en-savoir-plus)
-    - [Contribuer](#contribuer)
-  - [Licence](#licence)
+    - [Dependencies](#dependencies)
+  - [Author](#author)
+  - [Learn More](#learn-more)
+    - [Contributing](#contributing)
+  - [License](#license)
 
-## Pour commencer
+## Getting Started
 
-### Prérequis
+### Prerequisites
 
-Avant de commencer, assurez-vous d'avoir installé :
+Before you begin, ensure you have the following installed:
 
 - Node.js
-- npm (Gestionnaire de paquets Node)
-- nodemon (devDependencies) : Nodemon est un utilitaire qui surveille les modifications dans les fichiers de votre application et redémarre automatiquement le serveur lorsque des modifications sont détectées. C'est principalement utilisé pendant le développement.
-- dotenv (dependencies) : Dotenv est utilisé pour charger les variables d'environnement à partir d'un fichier .env dans votre application. Il est couramment utilisé pour stocker des configurations sensibles, telles que les clés d'API ou les informations de base de données, en dehors du code source.
-- express (dependencies) : Express est un framework web pour Node.js qui facilite la création d'API et d'applications web. Il fournit des fonctionnalités robustes pour le routage, les gestionnaires de requêtes, etc.
-- mongoose (dependencies) : Mongoose est une bibliothèque ODM (Object Data Modeling) pour MongoDB et Node.js. Il simplifie l'interaction avec une base de données MongoDB en fournissant un modèle d'objet pour les données.
-- swagger-jsdoc (dependencies) : Swagger JSDoc est un module qui génère automatiquement une spécification Swagger (OpenAPI) à partir de commentaires JSDoc dans votre code. Cela facilite la documentation de votre API.
-- swagger-ui-express (dependencies) : Swagger UI Express est un middleware pour Express qui sert la documentation Swagger générée par Swagger JSDoc sous forme d'interface utilisateur interactive.
-  
+- npm (Node Package Manager)
+- json-server (for simulating an API server with data)
+
 ### Installation
 
-1. **Cloner le dépôt :**
-
-   ```bash
-   git clone https://github.com/mibanas/MyRecipe-Backend.git
-
-
-2. **Exécuter le serveur :**
-
-Pour exécuter le serveur, utilisez la commande suivante :
+1. **Clone the repository:**
 
 ```bash
+git clone https://github.com/your-username/recipe-application.git
+```
+
+2. **Navigate to the project directory:**
+```bash
+cd recipe-application
+```
+
+3. **Install project dependencies.**
+```bash
+npm install
+```
+
+4. **Install JSON Server**
+```bash
+npm install -g json-server
+```
+
+5. **Create a folder & file like this in : src/Data/db.json file**
+
+
+6. **Add server to scripts in package.json**
+```bash
+"scripts": {
+...
+"server": "json-server --watch db.json --port 5000"}
+```
+
+7. **Start the server**
+```bash
+npm run server
+```
+
+8. **Launch the React application.**
+```bash
 npm start
+```
+
+**The application will be accessible at http://localhost:3000/. & the server will be running at http://localhost:5000**
 
 
 ### Dependencies
 **List of project dependencies:**
 
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "mongoose": "^8.0.4",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.0"
+@fortawesome/fontawesome-svg-core
+@fortawesome/free-brands-svg-icons
+@fortawesome/free-solid-svg-icons
+@fortawesome/react-fontawesome
+axios
+json-server
+react
+react-dom
+react-icons
+react-router-dom
+sweetalert2
+sweetalert2-react-content
+web-vitals
 
 **Dev Dependencies:**
 List of development dependencies:
 
-    "nodemon": "^3.0.2"
+tailwindcss
+vite
+webpack
+webpack-cli
 
 ## Author
+[AIT M'BAREK Youness](https://github.com/YNS-JNS).
 [Mohamed Sanabi](https://github.com/mibanas).
+[Imane Ouarid](https://github.com/imaneouarid).
+[Lhoussine ...](https://github.com/).
 
 ## Learn More
 
@@ -87,4 +125,3 @@ If you find issues or want to contribute, follow these steps:
 This project is licensed under the MIT License.
 
 Feel free to customize this template according to your project's specific details and structure.
-
