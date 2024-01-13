@@ -100,10 +100,10 @@ webpack
 webpack-cli
 
 ## Author
-[Mohamed Sanabi](https://github.com/mibanas).
-[Imane Ouarid](https://github.com/imaneouarid).
-[Lahoucine Ijioui](https://github.com/houssain-ijioui).
-[AIT M'BAREK Youness](https://github.com/YNS-JNS).
+- ***[Mohamed Sanabi](https://github.com/mibanas).***
+- ***[Imane Ouarid](https://github.com/imaneouarid).***
+- ***[Lahoucine Ijioui](https://github.com/houssain-ijioui).***
+- ***[AIT M'BAREK Youness](https://github.com/YNS-JNS).***
 
 ## Learn More
 
